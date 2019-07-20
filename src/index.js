@@ -673,7 +673,9 @@ export default class extends Component {
         ]}
       />
     )
-    for (let i = 0; i < this.state.total; i++) {
+
+    let totalPaginationDots = this.props.navigateOnLastSwipe ? this.state.totla -1 : this.state.total
+    for (let i = 0; i < totalPaginationDots; i++) {
       dots.push(
         i === this.state.index
           ? React.cloneElement(ActiveDot, { key: i })
