@@ -674,7 +674,8 @@ export default class extends Component {
       />
     )
 
-    let totalPaginationDots = this.props.navigateOnLastSwipe ? this.state.totla -1 : this.state.total
+    let totalPaginationDots = this.props.navigateOnLastSwipe ? this.state.total -1 : this.state.total
+
     for (let i = 0; i < totalPaginationDots; i++) {
       dots.push(
         i === this.state.index
